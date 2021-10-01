@@ -36,7 +36,7 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 async function getdatafromdb() {
-  const docRef = collection(db, '/lifftest/ao5JeK7SeK1TvAmTj58G');
+  const docRef = collection(db, 'lifftest');
   const docSnap = await getDocs(docRef);
   alert(docSnap);
   if (docSnap.exists()) {
@@ -168,7 +168,7 @@ btnApi.onclick = () => {
 };
 
 btnApiPost.onclick = () => {
-  getdatafromdb();
+  CreateMember();
 };
 //btnApi.onclick = userAction();
 
